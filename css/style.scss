@@ -63,21 +63,58 @@ nav {
     line-height: 64px;
     text-align: center;
     img {
-        position: absolute;
-        bottom: -80px;
+      position: absolute;
+      bottom: -80px;
     }
   }
 }
 .hero-contacts {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  .hero-adres {
     display: flex;
-    position: absolute;
-    bottom: 15px;
-    .hero-adres {
-        display: flex;
-        &:first-child {
-            margin-right: 100px;
-        }
+    &:first-child {
+      margin-right: 100px;
     }
-
-    
+    p {
+      padding-left: 10px;
+    }
+  }
+}
+#about {
+    position: relative;
+  height: 310px;
+  display: flex;
+  align-items: center;
+  .about-item_bg_svg {
+      position: absolute;
+      right: 0;
+      top: 40px;
+  }
+  .about-list {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    .about-item {
+      width: (100%/4);
+      text-align: center;
+      > img {
+        width: 80px;
+        height: 80px;
+      }
+      > p {
+        font-family: $font;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 27px;
+        padding-top: 20px;
+      }
+      .about-item_bike_svg {
+        position: relative;
+        bottom: -7px;
+      }
+    }
+  }
 }

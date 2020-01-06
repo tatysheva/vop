@@ -6,6 +6,15 @@
 
 $font: "Roboto", sans-serif;
 
+@mixin title {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  color: #d4c17f;
+}
+
 body {
   background: #242b33;
   font-family: "Raleway", sans-serif;
@@ -83,14 +92,14 @@ nav {
   }
 }
 #about {
-    position: relative;
+  position: relative;
   height: 310px;
   display: flex;
   align-items: center;
   .about-item_bg_svg {
-      position: absolute;
-      right: 0;
-      top: 40px;
+    position: absolute;
+    right: 0;
+    top: 40px;
   }
   .about-list {
     width: 70%;
@@ -115,6 +124,36 @@ nav {
         position: relative;
         bottom: -7px;
       }
+    }
+  }
+}
+h3 {
+  @include title();
+}
+
+.catalog-title {
+  padding: 100px 0;
+}
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px;
+  .apartement {
+    position: relative;
+    width: calc(50% - 20px);
+    height: 320px;
+    background: url(../img/loft.png), no-repeat;
+    background-size: cover;
+    p {
+      position: absolute;
+      bottom: 40px;
+      left: 10px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    &:nth-child(odd) {
+      margin-right: 20px;
+      margin-bottom: 20px;
     }
   }
 }

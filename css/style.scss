@@ -15,6 +15,28 @@ $font: "Roboto", sans-serif;
   color: #d4c17f;
 }
 
+@mixin form-input {
+  width: 255px;
+  height: 50px;
+  background: rgba(#ffffff, 0.2);
+  border: none;
+}
+
+@mixin district-btn {
+  cursor: pointer;
+  width: 255px;
+  height: 50px;
+  background: #d4c17f;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+  border: none;
+  color: #ffffff;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: #242b33;
   font-family: "Raleway", sans-serif;
@@ -48,6 +70,9 @@ nav {
     a {
       text-decoration: none;
       color: #ffffff;
+      &:hover {
+        color: #d4c17f;
+      }
     }
   }
 }
@@ -138,6 +163,19 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   margin: -20px;
+  position: relative;
+  &::before {
+    content: "III";
+    font-size: 400px;
+    line-height: 533px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0.02;
+    position: absolute;
+    left: -80px;
+    top: -200px;
+  }
   .apartement {
     position: relative;
     width: calc(50% - 20px);
@@ -154,6 +192,185 @@ h3 {
     &:nth-child(odd) {
       margin-right: 20px;
       margin-bottom: 20px;
+    }
+  }
+}
+
+#district {
+  height: 560px;
+  background: url(../img/form-bg.png);
+}
+.district-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.district-content-about {
+  width: 50%;
+  > h3 {
+    padding: 180px 0 50px;
+  }
+  > p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.info-form {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  .info-form_input {
+    width: 50%;
+  }
+
+  .info-form_item {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+    @include form-input();
+  }
+  input.info-form_item {
+    &::placeholder {
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      left: -10px;
+    }
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  input {
+    @include form-input();
+  }
+}
+
+.video {
+  width: 719px;
+  height: 650px;
+  background: url(../img/video.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  &::before {
+    content: "IV";
+    font-size: 400px;
+    line-height: 533px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0.02;
+    position: absolute;
+    right: -300px;
+    z-index: -1;
+  }
+}
+.district-map {
+  padding: 180px 0 100px;
+}
+.map {
+  width: 1110px;
+  height: 358px;
+  position: relative;
+  &::before {
+    content: "V";
+    font-size: 400px;
+    line-height: 533px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0.02;
+    position: absolute;
+    left: -100px;
+    top: -200px;
+    z-index: -1;
+  }
+}
+.questions-title {
+  padding-top: 180px;
+}
+
+.district-form {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0 180px;
+  p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  input {
+    @include form-input();
+    color: #ffffff;
+  }
+}
+
+.district-btn {
+  @include district-btn();
+}
+.district-form_item {
+  font-size: 13px;
+  line-height: 16px;
+  padding-left: 10px;
+  width: calc(25% - 40px);
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+input.district-form_item {
+  &::placeholder {
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    left: -10px;
+  }
+}
+
+footer {
+  background: #2d343c;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 60px;
+}
+.footer-list {
+  list-style: none;
+  .email {
+    color: #d4c17f;
+  }
+  li {
+    padding-bottom: 15px;
+  }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    &:hover {
+      color: #d4c17f;
+    }
+  }
+}
+.sicialmedia {
+  display: flex;
+  a {
+    font-size: 25px;
+    margin-right: 20px;
+    &:hover {
+      color: #d4c17f;
     }
   }
 }

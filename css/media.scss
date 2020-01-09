@@ -1,0 +1,16 @@
+@media (max-width: 1078px) {
+  .info-form {
+    display: block;
+
+    .info-form_item {
+      width: 100% !important;
+      margin: 0;
+    }
+  }
+
+  .video {
+    &:before {
+      display: none;
+    }
+  }
+}
